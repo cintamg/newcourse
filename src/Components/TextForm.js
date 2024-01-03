@@ -15,14 +15,14 @@ export default function TextForm(props) {
     setText(newText);
   }
 
-  const [text, setText] = useState("Enter the text");
+  const [text, setText] = useState("");
 
   return (
     <>
     <div className="container">
       <div className="mb-3">
           <label htmlFor="myBox" className="form-label"><b>Input your text</b></label>
-          <textarea className="form-control" onChange={handleOnChange} id="myBox" rows="8" value={text}></textarea>
+          <textarea className="form-control" onChange={handleOnChange} placeholder='Enter your text' id="myBox" rows="8" value={text}></textarea>
       </div>
       <div className="btn">
           <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
@@ -32,6 +32,8 @@ export default function TextForm(props) {
     <div className="container">
       <h1>Your text summary</h1>
       <p>{text.split(" ").length} Words {text.length} Characters</p>
+      <h2>Preview</h2>
+      <p>{text}</p>
     </div>
     </>
   )
