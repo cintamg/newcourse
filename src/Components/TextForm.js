@@ -15,6 +15,11 @@ export default function TextForm(props) {
     setText(newText);
   }
 
+  const handleClrClick = () => {
+    let newText = "";
+    setText(newText);
+  }
+
   const [text, setText] = useState("");
 
   return (
@@ -26,7 +31,8 @@ export default function TextForm(props) {
       </div>
       <div className="btn">
           <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
-          <button className="btn btn-primary" onClick={handleLoClick}>Convert to LowerCase</button>
+          <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
+          <button className="btn btn-primary" onClick={handleClrClick}>Clear</button>
       </div>
     </div>
     <div className="container">
