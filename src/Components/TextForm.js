@@ -10,7 +10,7 @@ export default function TextForm(props) {
   })
 
   const handleChange = () => {
-    if(isChecked.color == "white"){
+    if(isChecked.color === "white"){
       setIsChecked({
         color : "black",
         backgroundColor : "white"
