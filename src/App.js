@@ -7,8 +7,8 @@ function App() {
   return (
     <>
     <Navbar title="TextUtils"/>
-    {/* <TextForm heading='Enter your text here'/> */}
-    <About/>
+    <TextForm heading='Enter your text here'/>
+    {/* <About/> */}
     </>
   );
 }
